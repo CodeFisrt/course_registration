@@ -178,7 +178,25 @@ pre.code-format {
     background: none;
 }
 
-
+.accordion-item {
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 0.25rem;
+    margin-bottom: 0.5rem;
+  }
+  .accordion-button {
+    background-color: #13cad7;
+    color: #fff;
+  }
+  .accordion-button.collapsed {
+    background-color: #e655c4;
+  }
+  .accordion-body {
+    background-color: #fff;
+  }
+  .fas{
+      padding-right: 10px;
+  }
 /*************************/
 /*     Media Queries     */
 /*************************/
