@@ -41,7 +41,7 @@
     <link rel="icon" href="images/favicon.png">
 </head>
 
-<body data-spy="scroll" data-target=".fixed-top">
+<body   data-target=".fixed-top">
 
     <!-- Preloader -->
     <div class="spinner-wrapper">
@@ -55,46 +55,24 @@
 
 
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
-
-        <!-- Text Logo - Use this if you don't have a graphic logo -->
-        <!-- <a class="navbar-brand logo-text page-scroll" href="index.html">Corso</a> -->
-
-        <!-- Image Logo -->
-        <a class="navbar-brand logo-image" href="index.html"><img src="images/logo.svg" alt="alternative"></a>
-
-        <!-- Mobile Menu Toggle Button -->
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
-            aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-awesome fas fa-bars"></span>
-            <span class="navbar-toggler-awesome fas fa-times"></span>
-        </button>
-        <!-- end of mobile menu toggle button -->
-
-        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-
-
-        </div>
-    </nav> <!-- end of navbar -->
-    <!-- end of navigation -->
+   
 
 
     <!-- Header -->
     <header id="header" class="header">
-        <div class="container">
+        <div class="container"> 
             <div class="row">
                 <div class="col-lg-12">
                     <div class="text-container">
+                        <img class="navbar-brand logo-image" style="height: 100px;" src="images/angular.svg" alt="alternative"> 
                         <div class="countdown">
                             <span id="clock"></span>
                         </div>
-                        <h1>Angular Training Course</h1>
-                        <p class="p-large">This course is designed for beginners who want to learn Angular, a popular
-                            JavaScript framework for building web applications.
-                            It covers the fundamental concepts and features of Angular, including components, services,
-                            routing, and forms.</p>
+                        <h1>Angular Academy</h1>
+                        <p class="p-large"> Course is designed for beginners who want to learn Angular & For Professional who want Up-Skill.
+                         Course is only Dedicated For Angular only so Considering you Alreaday know Html, CSS, Javascript </p>
                         <a class="btn-solid-lg page-scroll" href="#register">REGISTER</a>
-                        <a class="btn-outline-lg page-scroll" href="#instructor">DISCOVER</a>
+                        <a class="btn-outline-lg page-scroll" href="#courseDetails">DISCOVER</a>
                     </div> <!-- end of text-container -->
                 </div> <!-- end of col -->
             </div> <!-- end of row -->
@@ -311,8 +289,7 @@
                     <div class="text-container">
                         <h2>Who Should Attend This Angular Training Course</h2>
                         <p>This course is for anyone passionate about the web technologies, Ready to upgrade your
-                            Existing knowledge or event If you are trying to Change your Domain </p>
-                        <a class="btn-solid-reg popup-with-move-anim" href="#details-lightbox">LIGHTBOX</a>
+                            Existing knowledge or event If you are trying to Change your Domain </p> 
                     </div> <!-- end of text-container -->
                 </div> <!-- end of col -->
                 <div class="col-lg-6">
@@ -402,166 +379,238 @@
 
 
     <!-- Takeaways -->
-    <div class="container mt-5">
+    <div id="courseDetails" class="container mt-5">
         <h1 class="mb-4 text-center">Angular Course Details</h1>
         <div class="row">
-            <div class="col-6">
+            <div class="col-12 col-sm-6 col-md-4 col-lg-4 pt-2">
                 <div class="accordion" id="accordionExample1">
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="headingOne1">
                             <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#collapseOne1" aria-expanded="true" aria-controls="collapseOne1">
-                                <!-- <picture>
-                                    <img width="40" height="40" alt="Live Interactive Learning" title="Live Interactive Learning" fullbase="true" loading="lazy" src="https://d1jnx9ba8s6j9r.cloudfront.net/img/live_intr_live.webp">
-                                </picture> -->
-                                <!-- <i class="fas fa-info-circle"></i>  -->
-                                <h5 class="learnedu_edu_title__3cp09">Live Interactive Learning</h5>
+                                data-bs-target="#collapseOne1" aria-expanded="true" aria-controls="collapseOne1"> 
+                                <h5 class="learnedu_edu_title__3cp09">Instalation & Setup</h5>
+                            </button>
+                        </h2>
+                        <div id="collapseOne1" class="accordion-collapse collapse show" aria-labelledby="headingOne1"
+                            data-bs-parent="#accordionExample1">
+                            <div class="accordion-body">
+                                <ul> 
+                                    <li>Introduction to Angular</li>
+                                    <li>Angular Architecture</li>
+                                    <li>Building blocks of Angular</li>
+                                    <li>Angular Installation</li>
+                                    <li>Angular CLI</li>
+                                    <li>Angular CLI commands</li>
+                                    <li>Understanding files in Angular</li>
+                                    <li>Various Version Differences</li>
+                                </ul>
+                                <strong class="text-right text-success"> (2 Sessions)</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-4 pt-2">
+                <div class="accordion" id="accordionExample1">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingOne1">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseOne1" aria-expanded="true" aria-controls="collapseOne1"> 
+                                <h5 class="learnedu_edu_title__3cp09">Components & Data Binding</h5>
+                            </button>
+                        </h2>
+                        <div id="collapseOne1" class="accordion-collapse collapse show" aria-labelledby="headingOne1"
+                            data-bs-parent="#accordionExample1">
+                            <div class="accordion-body">
+                                <ul> 
+                                    <li>Decorators and its types</li>
+                                    <li>Angular Components</li>
+                                    <li>Creating A Component Through Angular CLI</li>
+                                    <li>Ways to specify selectors</li>
+                                    <li>Template and styles</li>
+                                    <li>Installing bootstrap to design application</li>
+                                    <li>@Input @Output</li>
+                                    <strong class="text-right text-success"> (2 Sessions)</strong>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+            <div class="col-12 col-sm-6 col-md-4 col-lg-4 pt-2">
+                <div class="accordion" id="accordionExample1">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingOne1">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseOne1" aria-expanded="true" aria-controls="collapseOne1"> 
+                                <h5>   Routes and Navigation</h5>
+                            </button>
+                        </h2>
+                        <div id="collapseOne1" class="accordion-collapse collapse show" aria-labelledby="headingOne1"
+                            data-bs-parent="#accordionExample1">
+                            <div class="accordion-body">
+                                <ul> 
+                                    <li>Setting Up Routes</li> 
+                                    <li>Wildcard and Redirecting Routes</li>
+                                    <li>Adding Navigation Programmatically</li>
+                                    <li>Passing Route Parameters</li>
+                                    <li>Extracting Parameters Using ActivatedRoute</li> 
+                                    <li>Child Routes</li>
+                                    <li>Route Guards</li> 
+                                    <strong class="text-right text-success"> (2 Sessions)</strong>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-4 pt-2">
+                <div class="accordion" id="accordionExample1">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingOne1">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseOne1" aria-expanded="true" aria-controls="collapseOne1"> 
+                                <h5 class="learnedu_edu_title__3cp09">  Directives and Pipes</h5>
+                            </button>
+                        </h2>
+                        <div id="collapseOne1" class="accordion-collapse collapse show" aria-labelledby="headingOne1"
+                            data-bs-parent="#accordionExample1">
+                            <div class="accordion-body">
+                                <ul> 
+                                    <li>Structural Directives</li>
+                                    <li>Attribute Directives</li>
+                                    <li>Custom Directives</li>
+                                    <li>Pipes & Built-in Pipes</li>  
+                                    <li>Custom pipes</li> 
+                                    <strong class="text-right text-success"> (4 Sessions)</strong>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-4 pt-2">
+                <div class="accordion" id="accordionExample1">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingOne1">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseOne1" aria-expanded="true" aria-controls="collapseOne1"> 
+                                <h5 class="learnedu_edu_title__3cp09"> Angular Services </h5>
+                            </button>
+                        </h2>
+                        <div id="collapseOne1" class="accordion-collapse collapse show" aria-labelledby="headingOne1"
+                            data-bs-parent="#accordionExample1">
+                            <div class="accordion-body">
+                                <ul> 
+                                    <li>Need for a service</li>
+                                    <li>Dependency Injection</li>
+                                    <li>Creating a service</li> 
+                                    <strong class="text-right text-success"> (1 Sessions)</strong>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-4 pt-2">
+                <div class="accordion" id="accordionExample1">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingOne1">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseOne1" aria-expanded="true" aria-controls="collapseOne1"> 
+                                <h5 class="learnedu_edu_title__3cp09">  Forms in Angular</h5>
                             </button>
                         </h2>
                         <div id="collapseOne1" class="accordion-collapse collapse show" aria-labelledby="headingOne1"
                             data-bs-parent="#accordionExample1">
                             <div class="accordion-body">
                                 <ul>
-                                    <li>World-Class Instructors</li>
-                                    <li>Expert-Led Mentoring Sessions</li>
-                                    <li>Instant doubt clearing</li>
+                                    <li>Types of forms</li> 
+                                    <li>Template-driven vs Reactive forms</li>
+                                    <li>Template-driven forms + Validation</li>
+                                    <li>Reactive Forms + Validation</li>  
                                 </ul>
+                                <strong class="text-right text-success"> (2 Sessions)</strong>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-6">
-                <div class="accordion" id="accordionExample2">
+            <div class="col-12 col-sm-6 col-md-4 col-lg-4 pt-2">
+                <div class="accordion" id="accordionExample1">
                     <div class="accordion-item">
-                        <h2 class="accordion-header" id="headingThree2">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#collapseThree2" aria-expanded="false" aria-controls="collapseThree2">
-                                <!-- <i class="fas fa-cubes"></i> -->
-                                <!-- <picture>
-                                    <img width="40" height="40" fullbase="true" alt="Lifetime Access" title="Lifetime Access" loading="lazy" src="https://d1jnx9ba8s6j9r.cloudfront.net/img/live_intr_life.webp">
-                                </picture> -->
-                                <h5 class="learnedu_edu_title__3cp09">Lifetime Access</h5>
-                            </button>
-                        </h2>
-                        <div id="collapseThree2" class="accordion-collapse collapse" aria-labelledby="headingThree2"
-                            data-bs-parent="#accordionExample2">
-                            <div class="accordion-body">
-                                <ul>
-                                    <li>Course Access Never Expires</li>
-                                    <li>Free Access to Future Updates</li>
-                                    <li>Unlimited Access to Course Content</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-6">
-                <div class="accordion" id="accordionExample3">
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="headingOne3">
+                        <h2 class="accordion-header" id="headingOne1">
                             <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#collapseOne3" aria-expanded="true" aria-controls="collapseOne3">
-                                <!-- <i class="fas fa-info-circle"></i> 24x7 Support -->
-                                <!-- <picture>
-                                    <img width="40" height="40" alt="24x7 Support" title="24x7 Support" fullbase="true" loading="lazy" src="https://d1jnx9ba8s6j9r.cloudfront.net/img/live_intr_247.webp">
-                                </picture> -->
-                                <h5 class="learnedu_edu_title__3cp09">24x7 Support</h5>
+                                data-bs-target="#collapseOne1" aria-expanded="true" aria-controls="collapseOne1"> 
+                                <h5 class="learnedu_edu_title__3cp09">RxJS and HTTPClient</h5>
                             </button>
                         </h2>
-                        <div id="collapseOne3" class="accordion-collapse collapse show" aria-labelledby="headingOne3"
-                            data-bs-parent="#accordionExample3">
+                        <div id="collapseOne1" class="accordion-collapse collapse show" aria-labelledby="headingOne1"
+                            data-bs-parent="#accordionExample1">
                             <div class="accordion-body">
                                 <ul>
-                                    <li>One-On-One Learning Assistance</li>
-                                    <li>Help Desk Support</li>
-                                    <li>Resolve Doubts in Real-time</li>
+                                    <li>RxJS Library</li> 
+                                    <li>API Call Integration</li>
+                                    <li>GET,POST,PUT,DELETE</li>
+                                    <li>HttpClient</li>
                                 </ul>
+                                <strong class="text-right text-success"> (2 Sessions)</strong>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-6">
-                <div class="accordion" id="accordionExample4">
+            
+          
+            <div class="col-12 col-sm-6 col-md-4 col-lg-4 pt-2">
+                <div class="accordion" id="accordionExample1">
                     <div class="accordion-item">
-                        <h2 class="accordion-header" id="headingThree4">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#collapseThree4" aria-expanded="false" aria-controls="collapseThree4">
-                                <!-- <i class="fas fa-cubes"></i> -->
-                                <!-- <picture>
-                                    <img width="40" height="40" fullbase="true" alt="Hands-On Project Based Learning" title="Hands-On Project Based Learning" loading="lazy" src="https://d1jnx9ba8s6j9r.cloudfront.net/img/live_intr_handson.webp">
-                                </picture> -->
-                                <h5 class="learnedu_edu_title__3cp09">Hands-On Project Based Learning</h5>
-                            </button>
-                        </h2>
-                        <div id="collapseThree4" class="accordion-collapse collapse" aria-labelledby="headingThree4"
-                            data-bs-parent="#accordionExample4">
-                            <div class="accordion-body">
-                                <ul>
-                                    <li>Industry-Relevant Projects</li>
-                                    <li>Course Demo Dataset &amp; Files</li>
-                                    <li>Quizzes &amp; Assignments</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-6">
-                <div class="accordion" id="accordionExample5">
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="headingOne5">
+                        <h2 class="accordion-header" id="headingOne1">
                             <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#collapseOne5" aria-expanded="true" aria-controls="collapseOne5">
-                                <!-- <i class="fas fa-info-circle"></i> Industry Recognised Certification -->
-                                <!-- <picture>
-                                    <img width="40" height="40" fullbase="true" alt="Industry Recognised Certification" title="Industry Recognised Certification" loading="lazy" src="https://d1jnx9ba8s6j9r.cloudfront.net/img/live_intr_certi.webp">
-                                </picture> -->
-                                <h5 class="learnedu_edu_title__3cp09">Industry Recognised Certification</h5>
+                                data-bs-target="#collapseOne1" aria-expanded="true" aria-controls="collapseOne1"> 
+                                <h5 class="learnedu_edu_title__3cp09">  Advance Concepts</h5>
                             </button>
                         </h2>
-                        <div id="collapseOne5" class="accordion-collapse collapse show" aria-labelledby="headingOne5"
-                            data-bs-parent="#accordionExample5">
+                        <div id="collapseOne1" class="accordion-collapse collapse show" aria-labelledby="headingOne1"
+                            data-bs-parent="#accordionExample1">
                             <div class="accordion-body">
-                                <ul>
-                                    <li>Edureka Training Certificate</li>
-                                    <li>Graded Performance Certificate</li>
-                                    <li>Certificate of Completion</li>
+                                <ul> 
+                                    <li>Lazzy Loading</li>
+                                    <li>Interceptor</li>
+                                    <li>Component Communication</li>
+                                    <li>Mocking</li>
+                                    <li>ViewChild</li> 
+                                    <li>Generic Service For API Call</li> 
+                                    <strong class="text-right text-success"> (4 Sessions)</strong>
                                 </ul>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-6">
-                <div class="accordion" id="accordionExample6">
+            <div class="col-12 col-sm-6 col-md-4 col-lg-4 pt-2">
+                <div class="accordion" id="accordionExample1">
                     <div class="accordion-item">
-                        <h2 class="accordion-header" id="headingThree6">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#collapseThree6" aria-expanded="false" aria-controls="collapseThree6">
-                                <!-- <i class="fas fa-cubes"></i> -->
-                               <h5> Drop Us Query</h5>
+                        <h2 class="accordion-header" id="headingOne1">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseOne1" aria-expanded="true" aria-controls="collapseOne1"> 
+                                <h5 class="learnedu_edu_title__3cp09"> Project</h5>
                             </button>
                         </h2>
-                        <div id="collapseThree6" class="accordion-collapse collapse" aria-labelledby="headingThree6"
-                            data-bs-parent="#accordionExample6">
+                        <div id="collapseOne1" class="accordion-collapse collapse show" aria-labelledby="headingOne1"
+                            data-bs-parent="#accordionExample1">
                             <div class="accordion-body">
-                                <div>
-                                    <div>
-                                        <p>Like what you hear from our learners?</p>
-                                        <p>Take the first step!</p>
-                                    </div>
-                                    <div class="learnedu_clciktoview__244m_">
-                                        <button type="button" class="btn btn-primary" fdprocessedid="udauoj">Drop us
-                                            query</button>
-                                    </div>
-                                </div>
+                                <ul>
+                                    <li>Database Creation</li> 
+                                    <li>Creation Of API (Dot Net Core)</li>
+                                    <li>GitHub Repository Creation</li>
+                                    <li>Project Architecture & Setup</li>
+                                    <li>JWT Login With Refresh Token </li> 
+                                    <li>Working on Modules</li>
+                                    <li>Domain & Hosting Purchase</li>
+                                    <li>Live Project On Domain</li>
+                                </ul>
+                                <strong class="text-right text-success"> (6 Sessions)</strong>
                             </div>
                         </div>
                     </div>
@@ -569,114 +618,49 @@
             </div>
         </div>
     </div>
-    
+    <div id="courseDetails" class="container mt-5">
+        <h1 class="mb-2 text-center">Course Costing</h1>
+        <div class="row courses_row">
+            <div class="col-lg-4 col-md-6"> 
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="course">
+                    <div class="course_image"><img src="images/course_9.jpg" alt=""></div>
+                    <div class="course_body">
+                        <div class="course_header d-flex flex-row align-items-center justify-content-start">
+                            <div class="course_tag"><a href="#">Featured</a></div>
+                            <div class="course_price ml-auto">Price: <span>₹ 16,000</span></div>
+                        </div>
+                        <div class="course_title"><h3><a href="courses.html">Angular</a></h3></div>
+                        <div class="course_text">Payment Details Will be Shared Once We Start Sessions</div>
+                        <!-- <div class="course_footer d-flex align-items-center justify-content-start">
+                            <div class="course_author_image"><img src="images/featured_author.jpg" alt="https://unsplash.com/@anthonytran"></div>
+                            <div class="course_author_name">By <a href="#">James S. Morrison</a></div>
+                            <div class="course_sales ml-auto"><span>352</span> Sales</div>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+   
     <!-- end of takeaways -->
+    
 
-
-    <!-- Testimonials -->
-    <div class="slider-2">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <h5>Check out our attendees testimonials from previous editions of the SEO Training</h5>
-
-                    <!-- Text Slider -->
-                    <div class="slider-container">
-                        <div class="swiper-container text-slider">
-                            <div class="swiper-wrapper">
-
-                                <!-- Slide -->
-                                <div class="swiper-slide">
-                                    <div class="image-wrapper">
-                                        <img class="img-fluid" src="images/testimonial-1.jpg" alt="alternative">
-                                    </div> <!-- end of image-wrapper -->
-                                    <div class="text-wrapper">
-                                        <div class="testimonial-text">I took the SEO training course about a year
-                                            ago
-                                            and I am very happy. It taught me all the basics of search engine
-                                            optimization and some tricks.</div>
-                                        <div class="testimonial-author">Jude Thorn - Online Marketer</div>
-                                    </div> <!-- end of text-wrapper -->
-                                </div> <!-- end of swiper-slide -->
-                                <!-- end of slide -->
-
-                                <!-- Slide -->
-                                <div class="swiper-slide">
-                                    <div class="image-wrapper">
-                                        <img class="img-fluid" src="images/testimonial-2.jpg" alt="alternative">
-                                    </div> <!-- end of image-wrapper -->
-                                    <div class="text-wrapper">
-                                        <div class="testimonial-text">Awesome course for the money. I never thought
-                                            I
-                                            could learn so much about search engine optimization in such a short
-                                            amount
-                                            of time. Highly recommend.</div>
-                                        <div class="testimonial-author">Roy Smith - Developer</div>
-                                    </div> <!-- end of text-wrapper -->
-                                </div> <!-- end of swiper-slide -->
-                                <!-- end of slide -->
-
-                                <!-- Slide -->
-                                <div class="swiper-slide">
-                                    <div class="image-wrapper">
-                                        <img class="img-fluid" src="images/testimonial-3.jpg" alt="alternative">
-                                    </div> <!-- end of image-wrapper -->
-                                    <div class="text-wrapper">
-                                        <div class="testimonial-text">Corso is the best SEO training course in the
-                                            market. It teaches you all the basics but it also adds value with some
-                                            advanced tips & tricks the are great.</div>
-                                        <div class="testimonial-author">Martin Singer - Online Marketer</div>
-                                    </div> <!-- end of text-wrapper -->
-                                </div> <!-- end of swiper-slide -->
-                                <!-- end of slide -->
-
-                                <!-- Slide -->
-                                <div class="swiper-slide">
-                                    <div class="image-wrapper">
-                                        <img class="img-fluid" src="images/testimonial-4.jpg" alt="alternative">
-                                    </div> <!-- end of image-wrapper -->
-                                    <div class="text-wrapper">
-                                        <div class="testimonial-text">Learning SEO can actually be fun. I attended
-                                            Corso
-                                            SEO training and I had a great time with my peer students and the
-                                            instructors. Highly recommended course.</div>
-                                        <div class="testimonial-author">Ronda Louis - Business Owner</div>
-                                    </div> <!-- end of text-wrapper -->
-                                </div> <!-- end of swiper-slide -->
-                                <!-- end of slide -->
-
-                            </div> <!-- end of swiper-wrapper -->
-
-                            <!-- Add Arrows -->
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
-                            <!-- end of add arrows -->
-
-                        </div> <!-- end of swiper-container -->
-                    </div> <!-- end of slider-container -->
-                    <!-- end of text slider -->
-
-                </div> <!-- end of col -->
-            </div> <!-- end of row -->
-        </div> <!-- end of container -->
-    </div> <!-- end of slider-2 -->
-    <!-- end of testimonials -->
+ 
 
 
     <!-- Date -->
-    <div id="date" class="basic-5">
+    <div id="date" class="basic-5 pb-2">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
                     <div class="text-container">
-                        <h2>December 22nd 2020 at Innovation Hub Space</h2>
-                        <p>Our mission is to help people do better SEO. The team is excited to invite you to the
-                            next
-                            SEO Training Course session which undoubtedly will provide you with the necessary skills
-                            to
-                            improve your online presence. Fill out the form to register and we'll contact you in
-                            less
-                            than 24h</p>
+                        <h2>March 15th 2024. we GO Live</h2>
+                        <p>I am aiming to Deliver knowledge I have plus getting you  10 step ahead from where you are now.
+                            You are here so you know How I teach and Probely you understood my Teaching style same you will get it here also + it will be live sessions to
+                            will be easier to get all your doubts Clear. </p>
+                            <p>As It's A live Session so I am trying to Limit batch count so that I can pay attention to Each one of you. So if you are not part of Current batch surely you will be placed in Next Batch</p> 
                         <a class="btn-solid-lg page-scroll" href="#register">REGISTER</a>
                     </div> <!-- end of text-container -->
                 </div> <!-- end of col -->
@@ -686,220 +670,30 @@
     <!-- end of date -->
 
 
-    <!-- Newsletter -->
-    <div class="form-2">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <h5>Stay updated with news by subscribing to our newsletter and our social channels</h5>
-
-                    <!-- Newsletter Form -->
-                    <form id="newsletterForm" data-toggle="validator" data-focus="false">
-                        <div class="form-group">
-                            <input type="email" class="form-control-input" id="nemail" required>
-                            <label class="label-control" for="nemail">Email</label>
-                            <div class="help-block with-errors"></div>
-                        </div>
-                        <div class="form-group checkbox">
-                            <input type="checkbox" id="nterms" value="Agreed-to-Terms" required>I've read and agree
-                            to
-                            Corso's written <a href="privacy-policy.html">Privacy Policy</a> and <a
-                                href="terms-conditions.html">Terms Conditions</a>
-                            <div class="help-block with-errors"></div>
-                        </div>
-                        <div class="form-group">
-                            <button type="submit" class="form-control-submit-button">SIGN UP</button>
-                        </div>
-                        <div class="form-message">
-                            <div id="nmsgSubmit" class="h5 text-center hidden"></div>
-                        </div>
-                    </form>
-                    <!-- end of newsletter form -->
-
-                    <!-- Social Links -->
-                    <div class="icon-container">
-                        <span class="fa-stack">
-                            <a href="#your-link">
-                                <i class="fas fa-circle fa-stack-2x"></i>
-                                <i class="fab fa-facebook-f fa-stack-1x"></i>
-                            </a>
-                        </span>
-                        <span class="fa-stack">
-                            <a href="#your-link">
-                                <i class="fas fa-circle fa-stack-2x"></i>
-                                <i class="fab fa-twitter fa-stack-1x"></i>
-                            </a>
-                        </span>
-                        <span class="fa-stack">
-                            <a href="#your-link">
-                                <i class="fas fa-circle fa-stack-2x"></i>
-                                <i class="fab fa-pinterest-p fa-stack-1x"></i>
-                            </a>
-                        </span>
-                        <span class="fa-stack">
-                            <a href="#your-link">
-                                <i class="fas fa-circle fa-stack-2x"></i>
-                                <i class="fab fa-instagram fa-stack-1x"></i>
-                            </a>
-                        </span>
-                        <span class="fa-stack">
-                            <a href="#your-link">
-                                <i class="fas fa-circle fa-stack-2x"></i>
-                                <i class="fab fa-linkedin-in fa-stack-1x"></i>
-                            </a>
-                        </span>
-                    </div> <!-- end of icon-container -->
-                    <!-- end of social icons -->
-
-                </div> <!-- end of col -->
-            </div> <!-- end of row -->
-        </div> <!-- end of container -->
-    </div> <!-- end of form-2 -->
-    <!-- end of newsletter -->
+    
 
 
-    <!-- Contact -->
-    <div id="contact" class="form-3">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6">
-                    <div class="text-container">
-                        <h2>Contact Details</h2>
-                        <p>For registration questions please get in touch using the contact details below. For any
-                            questions use the form.</p>
-                        <h5>Main Office Location</h5>
-                        <ul class="list-unstyled li-space-lg">
-                            <li class="media">
-                                <i class="fas fa-map-marker-alt"></i>
-                                <div class="media-body">22 Innovative, San Francisco, CA 94043, US</div>
-                            </li>
-                            <li class="media">
-                                <i class="fas fa-mobile-alt"></i>
-                                <div class="media-body">+44 68 554 332, &nbsp;&nbsp;<i
-                                        class="fas fa-mobile-alt"></i>&nbsp; +44 31 276 112</div>
-                            </li>
-                            <li class="media">
-                                <i class="fas fa-envelope"></i>
-                                <div class="media-body"><a class="light-gray"
-                                        href="mailto:contact@zigo.com">contact@zigo.com</a> <i
-                                        class="fas fa-globe"></i><a class="light-gray"
-                                        href="#your-link">www.zigo.com</a></div>
-                            </li>
-                        </ul>
-                    </div> <!-- end of text-container -->
-                </div> <!-- end of col -->
-                <div class="col-lg-6">
-
-                    <!-- Contact Form -->
-                    <form id="contactForm" data-toggle="validator" data-focus="false">
-                        <div class="form-group">
-                            <input type="text" class="form-control-input" id="cname" required>
-                            <label class="label-control" for="cname">Name</label>
-                            <div class="help-block with-errors"></div>
-                        </div>
-                        <div class="form-group">
-                            <input type="email" class="form-control-input" id="cemail" required>
-                            <label class="label-control" for="cemail">Email</label>
-                            <div class="help-block with-errors"></div>
-                        </div>
-                        <div class="form-group">
-                            <textarea class="form-control-textarea" id="cmessage" required></textarea>
-                            <label class="label-control" for="cmessage">Your message</label>
-                            <div class="help-block with-errors"></div>
-                        </div>
-                        <div class="form-group checkbox">
-                            <input type="checkbox" id="cterms" value="Agreed-to-Terms" required>I have read and
-                            agree to
-                            Corso's stated <a href="privacy-policy.html">Privacy Policy</a> and <a
-                                href="terms-conditions.html">Terms Conditions</a>
-                            <div class="help-block with-errors"></div>
-                        </div>
-                        <div class="form-group">
-                            <button type="submit" class="form-control-submit-button">SUBMIT</button>
-                        </div>
-                        <div class="form-message">
-                            <div id="cmsgSubmit" class="h5 text-center hidden"></div>
-                        </div>
-                    </form>
-                    <!-- end of contact form -->
-
-                </div> <!-- end of col -->
-            </div> <!-- end of row -->
-        </div> <!-- end of container -->
-    </div> <!-- end of form-3 -->
-    <!-- end of contact -->
+  
 
 
     <!-- Footer -->
     <div class="footer">
         <div class="container">
             <div class="row">
-                <div class="col-md-3">
+                <div class="col-12 text-center">
                     <div class="footer-col first">
-                        <h5>About Corso</h5>
-                        <p class="p-small">We're passionate about teaching people how to do better SEO for their
-                            online
-                            presence</p>
-                    </div>
-                </div> <!-- end of col -->
-                <div class="col-md-3">
-                    <div class="footer-col second">
-                        <h5>Links</h5>
-                        <ul class="list-unstyled li-space-lg p-small">
-                            <li class="media">
-                                <i class="fas fa-square"></i>
-                                <div class="media-body"><a href="terms-conditions.html">Terms & Conditions</a></div>
-                            </li>
-                            <li class="media">
-                                <i class="fas fa-square"></i>
-                                <div class="media-body"><a href="privacy-policy.html">Privacy Policy</a></div>
-                            </li>
-                            <li class="media">
-                                <i class="fas fa-square"></i>
-                                <div class="media-body"><a href="article-details.html">Article Details</a></div>
-                            </li>
-                        </ul>
-                    </div>
-                </div> <!-- end of col -->
-                <div class="col-md-3">
-                    <div class="footer-col third">
-                        <h5>Links</h5>
-                        <ul class="list-unstyled li-space-lg p-small">
-                            <li class="media">
-                                <i class="fas fa-square"></i>
-                                <div class="media-body"><a href="article-details.html">Article Details</a></div>
-                            </li>
-                            <li class="media">
-                                <i class="fas fa-square"></i>
-                                <div class="media-body"><a href="terms-conditions.html">Terms & Conditions</a></div>
-                            </li>
-                            <li class="media">
-                                <i class="fas fa-square"></i>
-                                <div class="media-body"><a href="privacy-policy.html">Privacy Policy</a></div>
-                            </li>
-                        </ul>
-                    </div>
-                </div> <!-- end of col -->
-                <div class="col-md-3">
+                        <h1>Thanks For Visiting</h1>
+                    </div> 
+                </div>
+            </div>
+            <div class="row"> 
+                <div class="col-md-12 text-center">
                     <div class="footer-col fourth">
-                        <h5>Social Media</h5>
-                        <p class="p-small">For news & updates follow us</p>
-                        <a href="#your-link">
-                            <i class="fab fa-facebook-f"></i>
-                        </a>
-                        <a href="#your-link">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                        <a href="#your-link">
-                            <i class="fab fa-pinterest-p"></i>
-                        </a>
-                        <a href="#your-link">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                        <a href="#your-link">
+                        <h5>Connect With Me</h5> 
+                        <a href="https://www.linkedin.com/in/chetan-jogi-a87148ba" target="_blank">
                             <i class="fab fa-linkedin-in"></i>
                         </a>
-                        <a href="#your-link">
+                        <a href="https://www.youtube.com/@LearningPartnerDigital"  target="_blank">
                             <i class="fab fa-youtube"></i>
                         </a>
                     </div>
@@ -910,20 +704,7 @@
     <!-- end of footer -->
 
 
-    <!-- Copyright -->
-    <div class="copyright">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <p class="p-small">Copyright © 2020 <a href="https://inovatik.com">Inovatik</a> - All rights
-                        reserved</p>
-                    <p class="p-small">Distributed By: <a href="https://themewagon.com" target="_blank">ThemeWagon</a>
-                    </p>
-                </div> <!-- end of col -->
-            </div> <!-- enf of row -->
-        </div> <!-- end of container -->
-    </div> <!-- end of copyright -->
-    <!-- end of copyright -->
+     
 
 
     <!-- Scripts -->
