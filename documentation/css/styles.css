@@ -194,22 +194,8 @@ pre.code-format {
   .accordion-body {
     background-color: #fff;
   }
-  .fas{
-      padding-right: 10px;
-  }
-  .learnedu_LearningEdu_section__2vTz5 .learnedu_card_over__3fj5h img {
-    text-align: center;
-    width: auto;
-    margin: 0 10px 0 auto;
-    min-width: 40px;
-}
-
-.learnedu_edu_title__3cp09 {
-    font-size: 20px;
-    font-weight: 600;
-    color: #0052cc;
-    margin: 0px 0px 0px 20px;
-}
+  
+  
 
 /*************************/
 /*     Media Queries     */
