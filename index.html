@@ -120,16 +120,41 @@
     </header> <!-- end of header -->
     <!-- end of header -->
 
-
+    <script>
+        var obj = {
+                "registrationId": 0,
+                "name": "string",
+                "mobileNo": "stringstri",
+                "emailId": "string",
+                "linkdinProfileUrl": "string",
+                "isWorking": true,
+                "collegeName": "string",
+                "city": "string",
+                "gender": "string"
+            };
+            $("#registerBtn").click(function () {
+                obj.name = $("#name").val();
+                obj.mobileNo = $("#mobileNo").val();
+                obj.emailId = $("#emailId").val();
+                obj.linkdinProfileUrl = "";
+                obj.isWorking = $("#isWorking").val();
+                obj.collegeName = "";
+                obj.city = $("#city").val();
+                obj.gender = $('input[name="gender"]:checked').val();;
+                    $.post("https://freeapi.gerasim.in/api/Webinar/CreateNewRegistration",obj,
+                        function (data, status) {
+                            alert("Data: " + data + "\nStatus: " + status);
+                        });
+                });
+    </script>
     <!-- Registration -->
     <div id="register" class="form-1">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6">
                     <div class="text-container">
-                        <h2>Register Using The Form</h2>
-                        <p>It's easy to register for the course, just fill out the form and click submit. Then you will
-                            be registered for one of the best SEO training courses in the industry</p>
+                        <h2>Register</h2>
+                        <p>Do Register Only If you are intrested to Join this Course. Once you Register I will provide Demo Sessions Zoom details.</p>
                         <ul class="list-unstyled li-space-lg">
                             <li class="media">
                                 <i class="fas fa-square"></i>
@@ -143,8 +168,7 @@
                             </li>
                             <li class="media">
                                 <i class="fas fa-square"></i>
-                                <div class="media-body"><strong>You will receive</strong> a confirmation email in less
-                                    than 24h</div>
+                                <div class="media-body"><strong>You will be added</strong> to A whatspp Channel One you Register Just Do Turn On Notification For That Channel</div>
                             </li>
                         </ul>
                     </div> <!-- end of text-container -->
@@ -153,52 +177,55 @@
 
                     <!-- Registration Form -->
                     <div class="form-container">
-                        <form id="registrationForm" data-toggle="validator" data-focus="false">
+                        <form id=" "  > 
                             <div class="form-group">
-                                <input type="text" class="form-control-input" id="rname" name="rname" required>
-                                <label class="label-control" for="rname">Complete name</label>
+                                <input type="text" class="form-control-input" id="name"   >
+                                <label class="" for="rname">Name</label>
                                 <div class="help-block with-errors"></div>
                             </div>
-                            <div class="form-group">
-                                <input type="email" class="form-control-input" id="remail" name="remail" required>
-                                <label class="label-control" for="remail">Email address</label>
-                                <div class="help-block with-errors"></div>
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="form-group">
+                                        <input type="email" class="form-control-input" id="emailId"    >
+                                        <label class="" for="remail">Email Address</label>
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control-input" id="mobileNo"  >
+                                        <label class="" for="rphone">Mobile Number</label>
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+                            </div> 
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="form-group">
+                                        <input type="radio"   value="Male" name="gender"  > Male
+                                        <input type="radio"   value="FeMale" name="gender"  > FeMale 
+                                    </div>  
+                                </div>
+                                <div class="col-6">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control-input" id="city"  >
+                                        <label class="" for="rphone">City</label> 
+                                    </div>
+                                </div>
                             </div>
-                            <div class="form-group">
-                                <input type="text" class="form-control-input" id="rphone" name="rphone" required>
-                                <label class="label-control" for="rphone">Phone number</label>
-                                <div class="help-block with-errors"></div>
-                            </div>
-                            <!-- <div class="form-group">
-                                <select class="form-control-input" id="workingProfessional" name="workingProfessional" required>
-                                    <option value="">Are you a working professional?</option>
-                                    <option value="yes">Yes</option>
-                                    <option value="no">No</option>
-                                </select>
-                                <div class="help-block with-errors"></div>
-                            </div> -->
-                            <div class="form-group">
-                                <select class="form-control-input" id="student" name="student" required>
-                                    <option value="">Select your status?</option>
-                                    <option value="yes">Are you a working professional?</option>
-                                    <option value="no">Are you a Student?</option>
-                                </select>
-                                <div class="help-block with-errors"></div>
-                            </div>
+                          
                             <div class="form-group checkbox">
-                                <input type="checkbox" id="rterms" value="Agreed-to-Terms" name="rterms" required>I've
-                                read and agree to Corso's written <a href="privacy-policy.html">Privacy Policy</a> and
-                                <a href="terms-conditions.html">Terms & Conditions</a>
-                                <div class="help-block with-errors"></div>
+                                <input type="checkbox" id="isWorking" value="Agreed-to-Terms" name="rterms"  > Are You a Working Professional
+                                
                             </div>
                             <div class="form-group">
-                                <button type="submit" class="form-control-submit-button">REGISTER</button>
+                                <button type="button" id="registerBtn" class="form-control-submit-button">REGISTER</button>
                             </div>
                             <div class="form-message">
                                 <div id="rmsgSubmit" class="h5 text-center hidden"></div>
                             </div>
                         </form>
-                    </div> end of form-container
+                    </div>  
                     <!-- end of registration form -->
 
                 </div> <!-- end of col -->
@@ -553,6 +580,8 @@
                                     <li>API Call Integration</li>
                                     <li>GET,POST,PUT,DELETE</li>
                                     <li>HttpClient</li>
+                                    <li>Subject & Subject Behaviour</li>
+                                    <li>RxJS Operators</li>
                                 </ul>
                                 <strong class="text-right text-success"> (2 Sessions)</strong>
                             </div>
@@ -622,10 +651,11 @@
         <h1 class="mb-2 text-center">Course Costing</h1>
         <div class="row courses_row">
             <div class="col-lg-4 col-md-6"> 
+                
             </div>
             <div class="col-lg-4 col-md-6">
                 <div class="course">
-                    <div class="course_image"><img src="images/course_9.jpg" alt=""></div>
+                    <div class="course_image"><img src="images/course.png" alt=""></div>
                     <div class="course_body">
                         <div class="course_header d-flex flex-row align-items-center justify-content-start">
                             <div class="course_tag"><a href="#">Featured</a></div>
@@ -646,12 +676,100 @@
    
     <!-- end of takeaways -->
     
+    <div class="cards">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h2>Course Key-Points</h2>
+                    <p class="p-heading">Here are the main topics that will be covered in the SEO training course. They cover all the basics of SEO and even some advanced techniques that will help you along the way</p>
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+            <div class="row">
+                <div class="col-lg-12">
 
+                    <!-- Card -->
+                    <div class="card key">
+                        <div class="card-image">
+                            <i class="fas fa-atom"></i>
+                        </div>
+                        <div class="card-body">
+                            <h4 class="card-title">Daily 1 Hr Sesion</h4>
+                            <p>Sessions Will be Daily From Monday-Friday In Evening Around 8 Pm Or 9 PM.</p>
+                        </div>
+                    </div>
+                    <!-- end of card -->
+
+                    <!-- Card -->
+                    <div class="card key">
+                        <div class="card-image">
+                            <i class="fas fa-key"></i>
+                        </div>
+                        <div class="card-body">
+                            <h4 class="card-title">Live Sessions</h4>
+                            <p>As I don't want this Premium Content not to be shared so No Recording Will be Provided</p>
+                        </div>
+                    </div>
+                    <!-- end of card -->
+
+
+                    <!-- Card -->
+                    <div class="card key">
+                        <div class="card-image">
+                            <i class="fas fa-newspaper"></i>
+                        </div>
+                        <div class="card-body">
+                            <h4 class="card-title">Project Source Code </h4>
+                            <p>With this Course You will have access to all YouTube Project Source Code  plus DataBase Also </p>
+                        </div>
+                    </div>
+                    <!-- end of card -->
+
+                    <!-- Card -->
+                    <div class="card key">
+                        <div class="card-image">
+                            <i class="fas fa-link"></i>
+                        </div>
+                        <div class="card-body">
+                            <h4 class="card-title">Job Support</h4>
+                            <p>A team will be there to assist you in your Job if you are stuck Anywhere <small class="text-danger">* Conditions Applied</small></p>
+                        </div>
+                    </div>
+                    <!-- end of card -->
+
+                    <!-- Card -->
+                    <div class="card key">
+                        <div class="card-image">
+                            <i class="far fa-handshake"></i>
+                        </div>
+                        <div class="card-body">
+                            <h4 class="card-title">Grow Your Network</h4>
+                            <p>With this course you will get a way to connect to Developers across world , grow your LinkedIn Connections</p>
+                        </div>
+                    </div>
+                    <!-- end of card -->
+
+
+                    <!-- Card -->
+                    <div class="card key">
+                        <div class="card-image">
+                            <i class="fas fa-chart-bar"></i>
+                        </div>
+                        <div class="card-body">
+                            <h4 class="card-title">API Access</h4>
+                            <p>You Will get Life Time Access of API I develope For All my youtube Channel Project videos </p>
+                        </div>
+                    </div>
+                    <!-- end of card -->
+                    
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div>
  
 
 
     <!-- Date -->
-    <div id="date" class="basic-5 pb-2">
+    <div id="date" class="basic-5 pb-5">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
