@@ -120,20 +120,38 @@
                 "city": "string",
                 "gender": "string"
             };
-            $("#registerBtn").click(function () {
-                obj.name = $("#name").val();
-                obj.mobileNo = $("#mobileNo").val();
-                obj.emailId = $("#emailId").val();
-                obj.linkdinProfileUrl = "";
-                obj.isWorking = $("#isWorking").val();
-                obj.collegeName = "";
-                obj.city = $("#city").val();
-                obj.gender = $('input[name="gender"]:checked').val();;
-                    $.post("https://freeapi.gerasim.in/api/Webinar/CreateNewRegistration",obj,
-                        function (data, status) {
-                            alert("Data: " + data + "\nStatus: " + status);
-                        });
-                });
+            function onSave() {
+                    obj.name = $("#name").val();
+                    obj.mobileNo = $("#mobileNo").val();
+                    obj.emailId = $("#emailId").val();
+                    obj.linkdinProfileUrl = "ASDASDAS";
+                    obj.isWorking =$('#isWorking').is(":checked");
+                    obj.collegeName =$("#collegeName").val();;
+                    obj.city = $("#city").val();
+                    obj.gender = $('input[name="gender"]:checked').val();
+                    if(obj.name !== '' && obj.mobileNo !== '' && obj.emailId !== '' && obj.collegeName !== '' &&
+                    obj.city !== '' && obj.gender !== '') {
+                        $.ajax({
+                        type: "POST",
+                        url: "https://freeapi.gerasim.in/api/Webinar/CreateNewRegistration",
+                        dataType : "json",
+    contentType: "application/json; charset=utf-8", 
+                        data: JSON.stringify(obj),
+
+                        success: function (results) {
+                            debugger;
+                            alert("Thanks For Registration. You will be added to a Whatsapp Channel")
+                        },error:function(error){
+                            debugger;
+                            alert(error.responseText)
+                        }
+                    });
+                    } else {
+                        alert('Please Provide Required Details')
+                    }
+                   
+
+                } 
     </script>
     <!-- Registration -->
     <div id="register" class="form-1">
@@ -154,7 +172,11 @@
                             </li>
                             <li class="media">
                                 <i class="fas fa-square"></i>
-                                <div class="media-body"><strong>You will be added</strong> to A whatsapp Channel One you Register Just Do Turn On Notification For That Channel</div>
+                                <div class="media-body"><strong>You will be added</strong> to A whatsapp Channel Once you Register Just Do Turn On Notification For That Channel to get notification of Messages</div>
+                            </li>
+                            <li class="media">
+                                <i class="fas fa-square"></i>
+                                <div class="media-body">Please Do <strong>Register</strong> If your are intrested for Paid Course.</div>
                             </li>
                         </ul>
                     </div> <!-- end of text-container -->
@@ -164,48 +186,59 @@
                     <!-- Registration Form -->
                     <div class="form-container">
                         <form id=""> 
-                            <div class="form-group">
-                                <input type="text" class="form-control-input" id="name">
-                                <label class="" for="name">Name</label>
-                                <div class="help-block with-errors"></div>
-                            </div>
                             <div class="row">
                                 <div class="col-6">
                                     <div class="form-group">
-                                        <input type="email" class="form-control-input" id="emailId">
-                                        <label class="" for="emailId">Email Address</label>
+                                        <input type="text" class="form-control-input" id="name">
+                                        <label class="" for="name">Name <span class="text-danger">*</span></label>
                                         <div class="help-block with-errors"></div>
                                     </div>
                                 </div>
-                                <div class="col-6">
-                                    <div class="form-group">
-                                        <input type="text" class="form-control-input" id="mobileNo">
-                                        <label class="" for="mobileNo">Mobile Number</label>
-                                        <div class="help-block with-errors"></div>
-                                    </div>
-                                </div>
-                            </div> 
-                            <div class="row">
                                 <div class="col-6">
                                     <div class="form-group">
                                         <input type="radio" value="Male" name="gender"> Male
                                         <input type="radio" value="Female" name="gender"> Female 
                                     </div>  
                                 </div>
+                            </div>
+                          
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="form-group">
+                                        <input type="email" class="form-control-input" id="emailId">
+                                        <label class="" for="emailId"> <span class="text-danger">*</span>Email Address</label>
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control-input" id="mobileNo">
+                                        <label class="" for="mobileNo"> <span class="text-danger">*</span>Mobile Number</label>
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+                            </div> 
+                            <div class="row"> 
                                 <div class="col-6">
                                     <div class="form-group">
                                         <input type="text" class="form-control-input" id="city">
-                                        <label class="" for="rphone">City</label> 
+                                        <label class="" for="rphone"> <span class="text-danger">*</span>City</label> 
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control-input" id="collegeName">
+                                        <label class="" for="rphone"> <span class="text-danger">*</span>Country</label> 
                                     </div>
                                 </div>
                             </div>
                           
                             <div class="form-group checkbox">
-                                <input type="checkbox" id="isWorking" value="Agreed-to-Terms" name="rterms"> Are You a Working Professional
+                                <input type="checkbox" id="isWorking"   name="rterms"> Are You a Working Professional
                                 
                             </div>
                             <div class="form-group">
-                                <button type="button" id="registerBtn" class="form-control-submit-button">REGISTER</button>
+                                <button type="button"  onclick="onSave()" class="form-control-submit-button">REGISTER</button>
                             </div>
                             <div class="form-message">
                                 <div id="rmsgSubmit" class="h5 text-center hidden"></div>
@@ -764,6 +797,7 @@
                 <div class="col-lg-12">
                     <div class="text-container">
                         <h2>Next Batch Start From March 18th 2024. we GO Live</h2>
+                        <p>Demo Session on 6th March 2024 At IST 9.00 PM </p>
                         <p>I am aiming to Deliver knowledge I have plus getting you  10 step ahead from where you are now.
                             You are here so you know How I teach and Probably  you understood my Teaching style same you will get it here also + it will be live sessions to
                             will be easier to get all your doubts Clear. </p>
