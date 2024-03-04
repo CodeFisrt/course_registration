@@ -183,8 +183,8 @@ a:hover {
 	width: 100%;
 	padding-left: 34px;
 	padding-right: 32px;
-	padding-top: 56px;
-	padding-bottom: 51px;
+	padding-top: 10px;
+	padding-bottom: 10px;
 	background: #f2f1f8;
 }
 .course_tag
@@ -286,6 +286,7 @@ a:hover {
 }
 .key {
 	padding: 10px !important;
+	margin-bottom: 1rem !important;
 	background-color: #e4b65c !important;
 }
 .courses_paginations
